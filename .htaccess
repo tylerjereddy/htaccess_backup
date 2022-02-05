@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^numpy(/.*) https://numpy.org/doc/stable$1 [R=permanent]
