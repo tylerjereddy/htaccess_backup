@@ -3,8 +3,7 @@ RewriteEngine On
 RewriteRule ^numpy(/.*) https://numpy.org/doc/stable$1 [R=permanent]
 # See https://github.com/scipy/scipy/issues/14267
 Redirect 301 /scipy/reference/objects.inv /scipy/objects.inv
-RewriteRule scipy/ scipy-1.8.0/reference
-RewriteRule scipy-1.8.0/reference scipy-1.8.0/html-scipyorg/reference
+RewriteRule ^scipy(/.*) scipy-1.8.0/html-scipyorg$1 [R=permanent]
 RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
