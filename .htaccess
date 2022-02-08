@@ -1,8 +1,10 @@
-Options +SymLinksIfOwnerMatch 
-RewriteEngine On 
-RewriteRule ^numpy(/.*) https://numpy.org/doc/stable$1 [R=permanent]
-# See https://github.com/scipy/scipy/issues/14267
-Redirect 301 /scipy/reference/objects.inv /scipy/objects.inv
-RewriteCond %{REQUEST_FILENAME} !-f 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+Options +SymLinksIfOwnerMatch
+RewriteEngine On
+
+RewriteRule ^numpy(/.*) https://numpy.org/doc/stable$1 [R=permanent,L]
+
+Redirect 301 /doc/scipy/reference/objects.inv /doc/scipy/objects.inv
+
+RewriteRule ^scipy/scipy-html.zip /doc/scipy-1.8.0/scipy-html-1.8.0.zip [L]
+RewriteRule ^scipy/scipy-ref.pdf  /doc/scipy-1.8.0/scipy-ref-1.8.0.pdf  [L]
+RewriteRule ^scipy/(.*) /doc/scipy-1.8.0/html-scipyorg/$1 [NC,L]
