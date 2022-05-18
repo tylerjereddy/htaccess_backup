@@ -5,6 +5,6 @@ RewriteRule ^numpy(/.*) https://numpy.org/doc/stable$1 [R=permanent,L]
 
 Redirect 301 /doc/scipy/reference/objects.inv /doc/scipy/objects.inv
 
-RewriteRule ^scipy/scipy-html.zip /doc/scipy-1.8.0/scipy-html-1.8.0.zip [L]
-RewriteRule ^scipy/scipy-ref.pdf  /doc/scipy-1.8.0/scipy-ref-1.8.0.pdf  [L]
-RewriteRule ^scipy/(.*) /doc/scipy-1.8.0/html-scipyorg/$1 [NC,L]
+RewriteRule ^scipy/scipy-html.zip /doc/scipy-1.8.1/scipy-html-1.8.1.zip [L]
+RewriteRule ^scipy/scipy-ref.pdf  /doc/scipy-1.8.1/scipy-ref-1.8.1.pdf  [L]
+RewriteRule ^scipy/(.*) /doc/scipy-1.8.1/html-scipyorg/$1 [NC,L]
